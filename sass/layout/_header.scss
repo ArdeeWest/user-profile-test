@@ -1,0 +1,127 @@
+.header {
+  background-color: $secondary-bg-color;
+  box-shadow: 0px 12px 12px rgba(0, 0, 0, 0.06);
+
+  &__container {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+  }
+
+  &__logo {
+    display: inline-block;
+    padding-top: 5px;
+    margin-bottom: 13px;
+  }
+
+  &__menu {
+    display: flex;
+    @include font-style($fs: 14px, $fw: 600, $lh: 1.14);
+  }
+
+  &__menu-item {
+    &:not(:last-child) {
+      margin-right: 36px;
+
+      @media screen and (max-width: 374px) {
+        margin-right: 25px;
+      }
+    }
+  }
+
+  &__menu-link {
+    display: block;
+    padding: 10px 0 23px;
+    color: rgba(62, 64, 86, 0.6);
+
+    &--current {
+      position: relative;
+      color: $primary-text-color;
+
+      &::after {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        content: '';
+        background: $gradient;
+        @include size(100%, 4px);
+      }
+    }
+  }
+
+  &__user-profile {
+    display: flex;
+    align-self: flex-start;
+    align-items: center;
+
+    @media screen and (max-width: 767px) {
+      position: absolute;
+      right: 15px;
+    }
+  }
+
+  &__user-name {
+    max-width: 25vw;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+
+    color: $secondary-text-color;
+    line-height: 1.25;
+    letter-spacing: -0.5px;
+    margin-right: 20px;
+
+    @media screen and (max-width: 424px) {
+      display: none;
+    }
+  }
+
+  &__user-img {
+    @include size(32px);
+    border-radius: 50%;
+  }
+
+  &__user-toggler {
+    position: relative;
+    margin-right: 9px;
+    margin-left: 4px;
+    padding: 0;
+    @include size(32px);
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+
+    &::after {
+      position: absolute;
+      top: 10px;
+      right: 12px;
+      content: '';
+      display: inline-block;
+      @include size(8px);
+      border-top: 2px solid #b2b3bb;
+      border-right: 2px solid #b2b3bb;
+      border-bottom: 0;
+      border-left: 0;
+      transform: rotate(135deg);
+    }
+  }
+
+  &__user-icons {
+    display: flex;
+  }
+
+  &__action-btn {
+    display: block;
+    position: absolute;
+    bottom: -32px;
+    right: 15px;
+    @include size(64px);
+    border: none;
+    border-radius: 50%;
+    background-image: url(../../images/cross.svg), $gradient;
+    background-position: center center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+  }
+}
