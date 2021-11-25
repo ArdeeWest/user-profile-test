@@ -543,7 +543,8 @@ body {
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
-  padding: 5px;
+  padding: 4px;
+  margin: -3px 0;
   border-radius: 6px;
   color: #3e4056;
   background-color: #ecf1f8;
