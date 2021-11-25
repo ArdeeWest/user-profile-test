@@ -1,0 +1,9 @@
+//  This file contains very basic styles.
+@import './reset';
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  background-color: $main-bg-color;
+  color: $primary-text-color;
+}
