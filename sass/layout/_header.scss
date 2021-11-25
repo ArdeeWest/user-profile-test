@@ -31,21 +31,29 @@
   }
 
   &__menu-link {
+    position: relative;
     display: block;
     padding: 10px 0 23px;
     color: rgba(62, 64, 86, 0.6);
+    transition: color 280ms cubic-bezier(0.4, 0, 0.2, 1);
 
-    &--current {
-      position: relative;
+    &::after {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      content: '';
+      opacity: 0;
+      background: $gradient;
+      @include size(100%, 4px);
+      transition: opacity 280ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    &--current, &:hover {
+      
       color: $primary-text-color;
 
       &::after {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        content: '';
-        background: $gradient;
-        @include size(100%, 4px);
+        opacity: 1;
       }
     }
   }
