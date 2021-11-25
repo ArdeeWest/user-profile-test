@@ -119,7 +119,7 @@
     @include size(64px);
     border: none;
     border-radius: 50%;
-    background-image: url(../../images/cross.svg), $gradient;
+    background-image: url(../images/cross.svg), $gradient;
     background-position: center center;
     background-repeat: no-repeat;
     cursor: pointer;

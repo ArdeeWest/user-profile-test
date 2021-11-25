@@ -215,7 +215,7 @@ body {
   height: 64px;
   border: none;
   border-radius: 50%;
-  background-image: url(../../images/cross.svg), linear-gradient(135deg, #ff974f 0%, #e32c75 100%);
+  background-image: url(../images/cross.svg), linear-gradient(135deg, #ff974f 0%, #e32c75 100%);
   background-position: center center;
   background-repeat: no-repeat;
   cursor: pointer;
