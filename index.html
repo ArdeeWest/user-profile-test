@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Synth &mdash; user profile</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Open+Sans:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
+      integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./css/main.min.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__container container">
+        
+        <!-- Web-site navigation -->
+
+        <nav class="header__nav">
+          <a class="header__logo" href="./index.html">
+            <svg width="50" height="23">
+              <use href="./images/icons.svg#logo"></use>
+            </svg>
+          </a>
+          <ul class="header__menu">
+            <li class="header__menu-item">
+              <a class="header__menu-link header__menu-link--current" href="#">FEED</a>
+            </li>
+            <li class="header__menu-item">
+              <a class="header__menu-link" href="#">EXPLORE</a>
+            </li>
+            <li class="header__menu-item">
+              <a class="header__menu-link" href="#">DISCUSSIONS</a>
+            </li>
+          </ul>
+        </nav>
+
+        <!-- User profile section of the header-->
+
+        <div class="header__user-profile">
+          <p class="header__user-name">Arthur Wood</p>
+          <img
+            class="header__user-img"
+            src="./images/arthur.jpg"
+            alt="Arthur Wood's avatar photo"
+          />
+          <button
+            class="header__user-toggler"
+            type="button"
+            aria-label="Account of Arthur Wood"
+          ></button>
+          <ul class="header__user-icons">
+            <li class="header__user-icons-item">
+              <a class="header__user-icons-link" href="#">
+                <svg width="32" height="32">
+                  <use href="./images/icons.svg#notification"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="header__user-icons-item">
+              <a class="header__user-icons-link" href="#">
+                <svg width="32" height="32">
+                  <use href="./images/icons.svg#share"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="header__user-icons-item">
+              <a class="header__user-icons-link" href="#">
+                <svg width="32" height="32">
+                  <use href="./images/icons.svg#medium"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <button class="header__action-btn" type="button"></button>
+      </div>
+    </header>
+
+    <main>
+      <section class="feed">
+        <div class="feed__container container">
+
+          <!-- User profile in the feed section -->
+
+          <article class="user-card">
+            <img class="user-card__avatar" src="images/ben.png" alt="User's portrait photo" />
+            <div class="user-card__info">
+              <h2 class="user-card__name">Benjamin Clementine</h2>
+              <a class="user-card__short-name" href="#">&#64;benclementine</a>
+              <a class="user-card__edit" href="#">
+                <svg class="user-card__edit-icon" width="17" height="17">
+                  <use href="./images/icons.svg#edit"></use>
+                </svg>
+                <span class="user-card__edit--underline">Edit Profile</span></a
+              >
+              <!-- Dropdown menu for blocking/reporting user -->
+
+              <button
+                class="user-card__moderate-btn"
+                data-dropdown-switch
+                type="button"
+                aria-label="dropdown menu for blocking/reporting user"
+              >
+                <svg width="24" height="24">
+                  <use href="./images/icons.svg#dots"></use>
+                </svg>
+              </button>
+
+              <div class="user-card__dropdown is-hidden" data-dropdown>
+                <button
+                  class="user-card__dropdown-btn user-card__dropdown-btn--current"
+                  type="button"
+                  aria-label="Report user"
+                >
+                  <svg class="user-card__dropdown-icon" width="20" height="20">
+                    <use href="./images/icons.svg#report"></use></svg>Report User
+                </button>
+
+                <button class="user-card__dropdown-btn" type="button" aria-label="Block User">
+                  <svg class="user-card__dropdown-icon" width="20" height="20">
+                    <use href="./images/icons.svg#delete"></use></svg>Block User
+                </button>
+              </div>
+            </div>
+            <ul class="user-card__statiscs">
+              <li class="user-card__statistics-item">
+                <span class="user-card__statistics-count">45</span> synths
+              </li>
+              <li class="user-card__statistics-item">
+                <span class="user-card__statistics-count">110</span> followers
+              </li>
+              <li class="user-card__statistics-item">
+                <span class="user-card__statistics-count">322</span> following
+              </li>
+            </ul>
+            <p class="user-card__description">
+              Cryptocurrencies including Ethereum, Ripple, and Litecoin have all plunged between 20
+              to 30 percent each, according to CoinMarketCap. Here is the latest Ripple price news
+              and live updates on XRP, bitcoin and Ethereum.
+            </p>
+          </article>
+
+          <section class="library">
+            <!-- Checkbox to switch between public and private profile -->
+            <div class="library__settings">
+              <label class="library__switcher">
+                <span class="library__status">Public</span>
+                <input type="checkbox" class="library__checkbox visually-hidden" />
+                <span class="library__checkbox-slider"></span>
+                <span class="library__status">Private</span>
+              </label>
+            </div>
+
+            <!-- Records cards -->
+
+            <section class="library__board">
+              <div class="library__card library__card--empty-top">
+                <h3 class="library__card-title">New air routes that promise cheap flights in</h3>
+                <footer class="library__card-footer">
+                  <img
+                    class="library__card-img"
+                    src="./images/placeholder.jpg"
+                    alt="avatar of author"
+                  />
+                  <p class="library__card-author">Gregory Watkins</p>
+                  <a class="library__card-share" href="#">Share</a>
+                </footer>
+              </div>
+              <div class="library__card library__card--empty-top">
+                <h3 class="library__card-title">New air routes that promise cheap flights in</h3>
+                <footer class="library__card-footer">
+                  <img
+                    class="library__card-img"
+                    src="./images/placeholder.jpg"
+                    alt="avatar of author"
+                  />
+                  <p class="library__card-author">Gregory Watkins</p>
+                  <a class="library__card-share" href="#">Share</a>
+                </footer>
+              </div>
+              <div class="library__card">
+                <p class="library__card-shared library__card-shared--tagged">
+                  Shared to&nbsp;<a class="library__card-tag" href="#"
+                    >#discussionaboutanimgttdds</a
+                  >
+                </p>
+                <h3 class="library__card-title">New air routes that promise cheap flights in</h3>
+                <footer class="library__card-footer">
+                  <img
+                    class="library__card-img"
+                    src="./images/placeholder.jpg"
+                    alt="avatar of author"
+                  />
+                  <p class="library__card-author">Gregory Watkins</p>
+                  <div class="library__card-icons">
+                    <a class="library__card-views" href="#">
+                      <svg class="library__card-views-img" width="16" height="16">
+                        <use href="./images/icons.svg#view"></use>
+                      </svg>88
+                    </a>
+
+                    <a class="library__card-likes" href="#">
+                      <svg class="library__card-likes-img" width="16" height="14">
+                        <use href="./images/icons.svg#like"></use>
+                      </svg>24
+                    </a>
+                  </div>
+                </footer>
+              </div>
+
+              <div class="library__card">
+                <p class="library__card-shared">
+                  <svg class="library__card-shared--icon" width="16" height="16">
+                    <use href="./images/icons.svg#link"></use>
+                    </svg>Shared via weblink
+                </p>
+                <h3 class="library__card-title">New air routes that promise cheap flights in</h3>
+                <footer class="library__card-footer">
+                  <img
+                    class="library__card-img"
+                    src="./images/placeholder.jpg"
+                    alt="avatar of author"
+                  />
+                  <p class="library__card-author">Gregory Watkins</p>
+                  <div class="library__card-icons">
+                    <a class="library__card-views" href="#">
+                      <svg class="library__card-views-img" width="16" height="16">
+                        <use href="./images/icons.svg#view"></use>
+                        </svg>88
+                    </a>
+
+                    <a class="library__card-likes" href="#">
+                      <svg class="library__card-likes-img" width="16" height="14">
+                        <use href="./images/icons.svg#like"></use>
+                        </svg>24
+                    </a>
+                  </div>
+                </footer>
+              </div>
+            </section>
+          </section>
+        </div>
+      </section>
+    </main>
+
+    <script src="./js/dropdown.js"></script>
+  </body>
+</html>
